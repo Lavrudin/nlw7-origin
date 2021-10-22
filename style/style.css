@@ -9,6 +9,7 @@ body {
   -webkit-font-smoothing: antialiased;
   --balck: hsl(240, 6%, 13%);
   --grey: hsl(240, 9%, 89%);
+  background: #000000;
 }
 
 body {
