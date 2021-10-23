@@ -16,3 +16,19 @@ function changeSocialMediaLinks() {
 }
 
 changeSocialMediaLinks();
+
+function getGitHubProfileInfos() {
+  const url = `https://api.github.com/users/${linksSocialMedia.github}`;
+  console.log(url);
+
+  fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
+      userName.textContent = data.name;
+      userLink.href = data.html_url;
+      userImage.src = data.avatar_url;
+      userLogin.textContent = data.login;
+    });
+}
+
+getGitHubProfileInfos();
